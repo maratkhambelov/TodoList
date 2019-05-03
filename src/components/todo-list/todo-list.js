@@ -5,9 +5,15 @@ import './todo-list.css';
 
 const TodoList = ({ todos, onDeleted,
                       onToggleImportant,
-                      onToggleDone}) => {
+                      onToggleDone,
+                      filteredAll,
+                      filteredActive,
+                      filteredDone}) => {
+
+
 
     const elements = todos.map((item) => {
+
         const { id, ...itemProps } = item;
 
         return (
